@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ghost-blog
+    env: node
+    plan: free
+    branch: main
+    buildCommand: yarn install && yarn build
+    startCommand: yarn start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: url
+        value: https://ghost-blog.onrender.com
+      - key: database__client
+        value: sqlite3

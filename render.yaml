@@ -10,6 +10,19 @@ services:
       - key: NODE_ENV
         value: production
       - key: url
-        value: https://ghost-blog.onrender.com
+        value: https://ghost-blog.onrender.com 
+        # <-- change to your Render URL or custom domain
       - key: database__client
         value: sqlite3
+      # Optional Mailgun SMTP settings for email/newsletter
+      # Uncomment and fill these out if using Mailgun
+      # - key: mail__transport
+      #   value: SMTP
+      # - key: mail__from
+      #   value: Your Name <you@yourdomain.com>
+      # - key: mail__options__service
+      #   value: Mailgun
+      # - key: mail__options__auth__user
+      #   value: postmaster@yourdomain.com
+      # - key: mail__options__auth__pass
+      #   value: your-mailgun-password
